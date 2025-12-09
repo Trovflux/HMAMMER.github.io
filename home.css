@@ -1,0 +1,77 @@
+html, body {
+  html, body {
+    height: 100%;
+    margin: 0;
+    overflow: hidden; /* remove page scrollbar */
+    font-family: Arial, sans-serif;
+    box-sizing: border-box;
+  }
+
+  body {
+    background-image: url('immages/portfolio.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    display: flex;
+    align-items: center; /* vertical centering */
+    justify-content: center; /* horizontal centering */
+    color: #ffffff;
+  }
+
+  h1 {
+    font-size: clamp(1.25rem, 6vw, 3.5rem);
+    font-style: bold;
+    margin: 0;
+    text-align: center;
+    text-shadow: 0 2px 6px rgba(0,0,0,0.6);
+    padding: 0 1rem;
+    max-width: 90vw;
+    line-height: 1.05;
+    word-wrap: break-word;
+  }
+
+  /* Apply the imported gothic font to the heading */
+  h1 {
+    font-family: 'UnifrakturCook', serif;
+    letter-spacing: 12px;
+    transform: translateY(-2px);
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* Slightly reduce size on very small screens */
+  @media (max-width: 420px) {
+    h1 { font-size: 2rem; }
+  }
+
+  /* Top centered navigation */
+  .top-nav {
+    position: fixed;
+    top: 16px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 10px;
+    background: rgba(0,0,0,0.45);
+    padding: 6px 10px;
+    border-radius: 999px;
+    z-index: 1000;
+    align-items: center;
+  }
+  .top-nav .nav-link {
+    color: #ffffff;
+    text-decoration: none;
+    padding: 8px 12px;
+    border-radius: 999px;
+    font-weight: 600;
+    transition: background 150ms ease, transform 120ms ease;
+    background: rgba(255,255,255,0.04);
+  }
+  .top-nav .nav-link:hover,
+  .top-nav .nav-link:focus {
+    background: rgba(255,255,255,0.12);
+    transform: translateY(-2px);
+  }
+
+  /* Make sure main content sits below the nav on small screens */
+  .content { padding-top: 3.5rem; }
